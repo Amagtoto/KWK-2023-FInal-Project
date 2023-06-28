@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct noClubs: View {
+struct home: View {
     var body: some View {
         NavigationView {
                 //Page Heading
@@ -83,9 +83,9 @@ struct noClubs: View {
     }
 }
 
-struct noClubs_Previews: PreviewProvider {
+struct home_Previews: PreviewProvider {
     static var previews: some View {
-        noClubs()
+        home()
     }
 }
 
