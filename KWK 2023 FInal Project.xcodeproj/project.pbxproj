@@ -11,6 +11,12 @@
 		0B15515C2A4A0C120073829A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15515B2A4A0C120073829A /* ContentView.swift */; };
 		0B15515E2A4A0C140073829A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B15515D2A4A0C140073829A /* Assets.xcassets */; };
 		0B1551612A4A0C140073829A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1551602A4A0C140073829A /* Preview Assets.xcassets */; };
+		CDD4739E2A4CA5E800811760 /* createClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739D2A4CA5E800811760 /* createClub.swift */; };
+		CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739F2A4CA5F500811760 /* joinClub.swift */; };
+		CDD473A22A4CA62000811760 /* myInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A12A4CA62000811760 /* myInfo.swift */; };
+		CDD473A42A4CA63300811760 /* directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A32A4CA63300811760 /* directory.swift */; };
+		CDD473A62A4CA64000811760 /* myClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A52A4CA64000811760 /* myClubs.swift */; };
+		CDD473A82A4CA67F00811760 /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A72A4CA67F00811760 /* schedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		0B15515B2A4A0C120073829A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B15515D2A4A0C140073829A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B1551602A4A0C140073829A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDD4739D2A4CA5E800811760 /* createClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createClub.swift; sourceTree = "<group>"; };
+		CDD4739F2A4CA5F500811760 /* joinClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinClub.swift; sourceTree = "<group>"; };
+		CDD473A12A4CA62000811760 /* myInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myInfo.swift; sourceTree = "<group>"; };
+		CDD473A32A4CA63300811760 /* directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = directory.swift; sourceTree = "<group>"; };
+		CDD473A52A4CA64000811760 /* myClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myClubs.swift; sourceTree = "<group>"; };
+		CDD473A72A4CA67F00811760 /* schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,12 @@
 		0B15514D2A4A0C120073829A = {
 			isa = PBXGroup;
 			children = (
+				CDD4739D2A4CA5E800811760 /* createClub.swift */,
+				CDD4739F2A4CA5F500811760 /* joinClub.swift */,
+				CDD473A12A4CA62000811760 /* myInfo.swift */,
+				CDD473A32A4CA63300811760 /* directory.swift */,
+				CDD473A52A4CA64000811760 /* myClubs.swift */,
+				CDD473A72A4CA67F00811760 /* schedule.swift */,
 				0B1551582A4A0C120073829A /* KWK 2023 FInal Project */,
 				0B1551572A4A0C120073829A /* Products */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD473A62A4CA64000811760 /* myClubs.swift in Sources */,
+				CDD4739E2A4CA5E800811760 /* createClub.swift in Sources */,
 				0B15515C2A4A0C120073829A /* ContentView.swift in Sources */,
 				0B15515A2A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift in Sources */,
+				CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */,
+				CDD473A22A4CA62000811760 /* myInfo.swift in Sources */,
+				CDD473A82A4CA67F00811760 /* schedule.swift in Sources */,
+				CDD473A42A4CA63300811760 /* directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
