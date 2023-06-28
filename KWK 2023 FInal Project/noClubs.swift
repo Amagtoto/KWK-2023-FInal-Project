@@ -1,21 +1,52 @@
 //
-//  schedule.swift
+//  ContentView.swift
 //  KWK 2023 FInal Project
 //
-//  Created by Laika Patel on 6/28/23.
+//  Created by Angela Magtoto on 6/26/23.
 //
 
 import SwiftUI
 
-struct schedule: View {
+struct noClubs: View {
     var body: some View {
         NavigationView {
                 //Page Heading
                 VStack(alignment: .leading) {
-                    Text("Schdedule")
+                    Text("My Clubs")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                 //Add your page content here!!!
+                    VStack(alignment: .center) {
+                        
+                        Text("To get started...")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            
+                        
+                        NavigationLink(destination: createClub()) {
+                            Text("Create Club")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.black)
+                                .multilineTextAlignment(.leading)
+                                .padding(.top)
+                            
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .padding([.top, .leading])
+                                .frame(width: 125.0, height: 60.0)
+                                .foregroundColor(Color.black)
+                            NavigationLink(destination: joinClub()) {
+                                Text("Join Club")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.white)
+                                    .padding([.top, .leading])
+                            }
+                            }
+
+                        }
+                        .padding([.top, .leading])
+
+                    }
                             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.horizontal)
@@ -31,7 +62,6 @@ struct schedule: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black)
                     },
-                
                 trailing:
                     HStack {
                         NavigationLink(destination: schedule()) {
@@ -53,8 +83,10 @@ struct schedule: View {
     }
 }
 
-struct schedule_Previews: PreviewProvider {
+struct noClubs_Previews: PreviewProvider {
     static var previews: some View {
-        schedule()
+        noClubs()
     }
 }
+
+
