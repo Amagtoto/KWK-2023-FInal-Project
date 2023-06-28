@@ -25,9 +25,12 @@ struct schedule: View {
             //Navigation bar
             .navigationBarItems(
                 leading:
-                    Text("ClubHub")
-                    .font(.title)
-                    .fontWeight(.heavy),
+                    NavigationLink(destination: myClubs()) {
+                        Text("ClubHub")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.black)
+                    },
                 
                 trailing:
                     HStack {

@@ -11,7 +11,7 @@ import SwiftUI
 struct KWK_2023_FInal_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }
