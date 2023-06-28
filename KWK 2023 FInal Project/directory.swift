@@ -46,10 +46,13 @@ struct directory: View {
                                     .font(.subheadline)
                             }
                         }
+                            
                     }
+                        
                         .padding(.vertical)
                     }
                 }
+                .listStyle(.plain)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.horizontal)
                 .padding(.vertical)

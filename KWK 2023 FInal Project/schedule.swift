@@ -59,7 +59,7 @@ struct schedule: View {
                             Text("July 4 - 4th of July")
                             Text("July 5 - AP Scores comes out")
                         }
-                        .listStyle(.sidebar)
+                        .listStyle(.plain)
                         
                         
                         
