@@ -15,16 +15,39 @@ struct createClub: View {
                     Text("Create Club")
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .padding(.top)
                 //Add your page content here!!!
-                        TextField("Class name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                                .multilineTextAlignment(.center)
+                    TextField("Class name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                        .multilineTextAlignment(.leading)
                             .font(.title)
-                            .border(Color.gray, width: 1)
+                            .border(Color.gray, width: 2)
+                    TextField("Room", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                        .multilineTextAlignment(.leading)
+                        .font(.title)
+                        .border(Color.gray, width: 2)
+                    TextField("Advisor", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                        .multilineTextAlignment(.leading)
+                        .font(.title)
+                        .border(Color.gray, width: 2)
+                    TextField("Category", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                        .multilineTextAlignment(.leading)
+                        .font(.title)
+                        .border(Color.gray, width: 2)
+
+                    }
+
                             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.horizontal)
                 .padding(.vertical)
                 .scrollIndicators(.hidden)
+            
+
+            }
             
             //Navigation bar
             .navigationBarItems(
