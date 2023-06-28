@@ -9,7 +9,44 @@ import SwiftUI
 
 struct schedule: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+                //Page Heading
+                VStack(alignment: .leading) {
+                    Text("Schdedule")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                //Add your page content here!!!
+                            }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                .padding(.horizontal)
+                .padding(.vertical)
+                .scrollIndicators(.hidden)
+            
+            //Navigation bar
+            .navigationBarItems(
+                leading:
+                    Text("ClubHub")
+                    .font(.title)
+                    .fontWeight(.heavy),
+                
+                trailing:
+                    HStack {
+                        NavigationLink(destination: schedule()) {
+                            Image(systemName: "calendar")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                        
+                        NavigationLink(destination: directory()) {
+                            Image(systemName: "menucard.fill")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                    
+                    })
+        }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 

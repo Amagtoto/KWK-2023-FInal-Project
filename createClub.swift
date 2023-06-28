@@ -9,21 +9,48 @@ import SwiftUI
 
 struct createClub: View {
     var body: some View {
-        NavigationStack{
-            VStack {
-                Text("Create Club")
+        NavigationView {
+                //Page Heading
+                VStack(alignment: .leading) {
+                    Text("Create Club")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                //Add your page content here!!!
+                        TextField("Class name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .multilineTextAlignment(.center)
+                            .font(.title)
+                            .border(Color.gray, width: 1)
+                            }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                .padding(.horizontal)
+                .padding(.vertical)
+                .scrollIndicators(.hidden)
+            
+            //Navigation bar
+            .navigationBarItems(
+                leading:
+                    Text("ClubHub")
                     .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                    .position(x:95, y:40)
-                TextField("Class Name", text: Value)
-                        .multilineTextAlignment(.center)
-                    .font(.title)
-                    .border(Color.gray, width: 1)
+                    .fontWeight(.heavy),
                 
-            }
-            .navigationTitle("ClubHub")
+                trailing:
+                    HStack {
+                        NavigationLink(destination: schedule()) {
+                            Image(systemName: "calendar")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                        
+                        NavigationLink(destination: directory()) {
+                            Image(systemName: "menucard.fill")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                    
+                    })
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 
@@ -32,3 +59,8 @@ struct createClub_Previews: PreviewProvider {
         createClub()
     }
 }
+
+
+
+
+       
