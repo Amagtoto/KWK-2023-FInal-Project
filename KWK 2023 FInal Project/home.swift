@@ -12,9 +12,6 @@ struct home: View {
         NavigationView {
                 //Page Heading
                 VStack(alignment: .leading) {
-                    Text("My Clubs")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
                 //Add your page content here!!!
                     VStack(alignment: .center) {
                         
@@ -48,7 +45,6 @@ struct home: View {
 
                     }
                             }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.horizontal)
                 .padding(.vertical)
                 .scrollIndicators(.hidden)
