@@ -9,7 +9,21 @@ import SwiftUI
 
 struct createClub: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack {
+                Text("Create Club")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                    .position(x:95, y:40)
+                TextField("Class Name", text: Value)
+                        .multilineTextAlignment(.center)
+                    .font(.title)
+                    .border(Color.gray, width: 1)
+                
+            }
+            .navigationTitle("ClubHub")
+        }
     }
 }
 
