@@ -9,12 +9,12 @@ import SwiftUI
 
 struct createClub: View {
     
-    @State var clubName = ""
-    @State var room = ""
-    @State var advisor = ""
-    @State var category = ""
-    @State var contact = ""
-    @State var about = ""
+    @State private var clubName : String = ""
+    @State private var room : String = ""
+    @State private var advisor : String = ""
+    @State private var category : String = ""
+    @State private var contact : String = ""
+    @State private var about : String = ""
     
     var body: some View {
         
@@ -42,27 +42,37 @@ struct createClub: View {
                    
                 TextField("About", text: $about)
                     .padding(.top)
-                  
                 
-                Button {
+                NavigationLink(destination: myClubs()(text: textInput)) {
+                                Text("Next")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                  
+//                NavigationStack {
+//
+//                    Button {
+//                    }
+//                label: {
+//                    ZStack {
+//                        RoundedRectangle(cornerRadius: 10)
+//                            .padding(.top)
+//                            .foregroundColor(Color.black)
+//                        NavigationLink("Join", destination: myClubs())
+//                            .padding([.top, .leading])
+//                            .font(.title3)
+//                            .foregroundColor(Color(hue: 1.0, saturation: 0.045, brightness: 0.966))
+//                            .multilineTextAlignment(.center)
+//                    }
+//                }
                 }
-            label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .padding(.top)
-                        .foregroundColor(Color.black)
-                    NavigationLink("Join", destination: myClubs())
-                        .padding([.top, .leading])
-                        .font(.title3)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.045, brightness: 0.966))
-                        .multilineTextAlignment(.center)
-                }
-            }
             .padding(.bottom)
             }
         }
     }
-}
+
 
 struct createClub_Previews: PreviewProvider {
     static var previews: some View {
