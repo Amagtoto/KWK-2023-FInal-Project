@@ -26,15 +26,6 @@ struct schedule: View {
             
             //Add your page content here!!!
             VStack {
-                MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Binding<Set<DateComponents>>@*/.constant([])/*@END_MENU_TOKEN@*/)
-                    .padding(.horizontal)
-                    .background(Color.white)
-                    .compositingGroup()
-                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                
-                Spacer()
-                Spacer()
-                
                 HStack {
                     Text("Upcoming Events")
                         .font(.title2)
@@ -68,6 +59,21 @@ struct schedule: View {
                 }
                 .listStyle(.plain)
                 .animation(.easeOut, value: showNewTask)
+                ZStack(alignment: .topLeading){
+                    if showNewTask {
+                        NewToDoView(title: "", showNewTask: $showNewTask)
+                        //Delete the toDoItems: $toDoItems binding
+                    }
+                }
+                Spacer()
+                MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Binding<Set<DateComponents>>@*/.constant([])/*@END_MENU_TOKEN@*/)
+                    .padding(.horizontal)
+                    .background(Color.white)
+                    .compositingGroup()
+                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                
+                Spacer()
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 170.0, height: 40.0)
@@ -87,10 +93,6 @@ struct schedule: View {
         .padding(.vertical)
         .scrollIndicators(.hidden)
     }
-        if showNewTask {
-            NewToDoView(title: "", showNewTask: $showNewTask)
-            //Delete the toDoItems: $toDoItems binding
-        }
     }
     private func deleteTask(offsets: IndexSet) {
         withAnimation {

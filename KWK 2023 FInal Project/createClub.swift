@@ -43,7 +43,7 @@ struct createClub: View {
                 TextField("About", text: $about)
                     .padding(.top)
                 
-                NavigationLink(destination: myClubs()(text: textInput)) {
+                NavigationLink(destination: myClubs()) {
                                 Text("Next")
                                     .padding()
                                     .background(Color.blue)
