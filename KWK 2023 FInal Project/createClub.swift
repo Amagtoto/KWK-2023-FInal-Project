@@ -50,34 +50,8 @@ struct createClub: View {
             }
             
             //Navigation bar
-            .navigationBarItems(
-                leading:
-                    NavigationLink(destination: myClubs()) {
-                        Text("ClubHub")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.black)
-                    },
-                trailing:
-                    HStack {
-                        NavigationLink(destination: schedule()) {
-                            Image(systemName: "calendar")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20))
-                        }
-                        
-                        NavigationLink(destination: directory()) {
-                            Image(systemName: "menucard.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20))
-                        }
-                    
-                    })
-        }
-        .navigationBarBackButtonHidden(true)
-
+          
     }
-}
 
 struct createClub_Previews: PreviewProvider {
     static var previews: some View {

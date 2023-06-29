@@ -14,6 +14,7 @@
 		0BA76A6C2A4CD11A00123B70 /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */; };
 		0BA76A6E2A4CD14700123B70 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A6D2A4CD14700123B70 /* Club.swift */; };
 		5D5C5E142A4CB88D00C8EC4F /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C5E132A4CB88D00C8EC4F /* schedule.swift */; };
+		CD87078A2A4D2B200021B69C /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8707892A4D2B200021B69C /* home.swift */; };
 		CDD4739E2A4CA5E800811760 /* createClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739D2A4CA5E800811760 /* createClub.swift */; };
 		CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739F2A4CA5F500811760 /* joinClub.swift */; };
 		CDD473A42A4CA63300811760 /* directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A32A4CA63300811760 /* directory.swift */; };
@@ -29,6 +30,7 @@
 		0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
 		0BA76A6D2A4CD14700123B70 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		5D5C5E132A4CB88D00C8EC4F /* schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
+		CD8707892A4D2B200021B69C /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		CDD4739D2A4CA5E800811760 /* createClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createClub.swift; sourceTree = "<group>"; };
 		CDD4739F2A4CA5F500811760 /* joinClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinClub.swift; sourceTree = "<group>"; };
 		CDD473A32A4CA63300811760 /* directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = directory.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				5D5C5E132A4CB88D00C8EC4F /* schedule.swift */,
 				CDD4739F2A4CA5F500811760 /* joinClub.swift */,
 				CDD473A32A4CA63300811760 /* directory.swift */,
+				CD8707892A4D2B200021B69C /* home.swift */,
 				0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */,
 				0BA76A6D2A4CD14700123B70 /* Club.swift */,
 				0B15515D2A4A0C140073829A /* Assets.xcassets */,
@@ -166,6 +169,7 @@
 				CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */,
 				0BA76A6E2A4CD14700123B70 /* Club.swift in Sources */,
 				5D5C5E142A4CB88D00C8EC4F /* schedule.swift in Sources */,
+				CD87078A2A4D2B200021B69C /* home.swift in Sources */,
 				CDD473A42A4CA63300811760 /* directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

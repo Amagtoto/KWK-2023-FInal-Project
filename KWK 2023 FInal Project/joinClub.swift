@@ -8,23 +8,47 @@
 import SwiftUI
 
 struct joinClub: View {
+    
+    @State var clubCode = ""
+    
     var body: some View {
         NavigationView {
                 //Page Heading
-                VStack(alignment: .leading) {
-                    Text("Join Club")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                //Add your page content here!!!
-                        TextField("Class name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                                .multilineTextAlignment(.center)
-                            .font(.title)
-                            .border(Color.gray, width: 1)
-                            }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(.horizontal)
-                .padding(.vertical)
-                .scrollIndicators(.hidden)
+            VStack {
+                
+                Form {
+                    TextField("Club code", text: $clubCode)
+                        .padding(.top)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                   
+                    Button {
+                        //add create new club action
+                        
+                    }
+                label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.black)
+                        NavigationLink("Join", destination: myClubs())
+                            .padding(.leading)
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .multilineTextAlignment(.center)
+                           
+                        
+                       
+                        // Text("Join")
+                            //.font(.headline)
+                            //.fontWeight(.bold)
+                            //.foregroundColor(Color.white)
+                    
+                           
+                    }
+                }
+                .padding(.bottom)
+                }
+            }
+                    
             
             //Navigation bar
             .navigationBarItems(
@@ -51,6 +75,8 @@ struct joinClub: View {
                         }
                     
                     })
+            
+            
         }
         .navigationBarBackButtonHidden(true)
     }
