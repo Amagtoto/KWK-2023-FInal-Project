@@ -26,14 +26,14 @@ struct ClubDetailView: View {
                 Text(club.about)
                     .font(.body)
                     .padding()
-                    
+                
                 
             }
             .ignoresSafeArea()
             
             VStack(alignment: .leading) {
                 Text(club.clubName)
-
+                
                 Text(club.roomNumber)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

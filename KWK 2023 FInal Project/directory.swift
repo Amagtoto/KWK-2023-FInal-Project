@@ -11,77 +11,49 @@ struct directory: View {
     
     var clubs: [Club] = clubList.clubs
     var body: some View {
-        NavigationView {
-                //Directory Heading
-                VStack(alignment: .leading) {
-                    Text("Directory")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.horizontal)
-                        .padding(.vertical)
-                    //Nested CELL
-                    List(clubs, id:\.id) { club in
-                        HStack(spacing: 15) {
-                            NavigationLink(destination: ClubDetailView(club: club)) {
-                            
-                            Image(club.imageName)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 70)
-                                .clipShape(Circle())
-                            
-                            VStack(alignment: .leading, spacing: 1) {
-                                Text(club.clubName)
-                                    .fontWeight(.bold)
-                                    .lineLimit(2)
-                                    .minimumScaleFactor(0.75)
-                                
-                                Text(club.roomNumber)
-                                
-                                Text(club.advisor)
-                                    .foregroundColor(.secondary)
-
-
-                                Text(club.category)
-                                    .font(.subheadline)
-                            }
-                        }
-                            
-                    }
+        VStack(alignment: .leading) {
+            Text("Directory")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+                .padding(.vertical)
+            //Nested CELL
+            List(clubs, id:\.id) { club in
+                HStack(spacing: 15) {
+                    NavigationLink(destination: ClubDetailView(club: club)) {
                         
-                        .padding(.vertical)
-                    }
-                }
-                .listStyle(.plain)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .scrollIndicators(.hidden)
-            
-            .navigationBarItems(
-                leading:
-                    NavigationLink(destination: myClubs()) {
-                        Text("ClubHub")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.black)
-                    },
-                
-                trailing:
-                    HStack {
-                        NavigationLink(destination: schedule()) {
-                            Image(systemName: "calendar")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20))
-                        }
+                        Image(club.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 70)
+                            .clipShape(Circle())
                         
-                        NavigationLink(destination: directory()) {
-                            Image(systemName: "menucard.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20))
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text(club.clubName)
+                                .fontWeight(.bold)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.75)
+                            
+                            Text(club.roomNumber)
+                            
+                            Text(club.advisor)
+                                .foregroundColor(.secondary)
+                            
+                            
+                            Text(club.category)
+                                .font(.subheadline)
                         }
+                    }
                     
-                    })
+                }
+                
+                .padding(.vertical)
+            }
         }
-        .navigationBarBackButtonHidden(true)
+        .listStyle(.plain)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .scrollIndicators(.hidden)
+        
     }
 }
 
