@@ -16,12 +16,12 @@ struct createClub: View {
     
     var body: some View {
         
-        VStack {
+        VStack(alignment: .leading) {
             Text("Create Club")
                 .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.black)
-                .padding(.top)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+                .padding(.vertical)
             Form {
                 TextField("Class name", text: $className)
                     .padding(.top)

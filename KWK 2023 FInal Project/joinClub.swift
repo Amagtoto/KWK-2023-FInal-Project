@@ -15,13 +15,12 @@ struct joinClub: View {
         
         //Page Heading
         
-        VStack {
+        VStack(alignment: .leading) {
             Text("Join Club")
                 .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.black)
-                .multilineTextAlignment(.leading)
-                .padding(.top)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+                .padding(.vertical)
             Form {
                 
                 TextField("Club code", text: $clubCode)

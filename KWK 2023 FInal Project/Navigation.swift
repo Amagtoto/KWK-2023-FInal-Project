@@ -32,7 +32,7 @@ struct Navigation: View {
                         schedule()
                     }
                     if selectedTab == .plus {
-                        myClubs()
+                        home()
                     }
                     if selectedTab == .book {
                         directory()

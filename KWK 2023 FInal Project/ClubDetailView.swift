@@ -16,6 +16,8 @@ struct ClubDetailView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .top)
+                    .ignoresSafeArea()
+                
                 Text("Contact")
                     .font(.title)
                     .fontWeight(.bold)
