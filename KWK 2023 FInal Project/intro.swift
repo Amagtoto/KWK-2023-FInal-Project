@@ -14,7 +14,7 @@ struct intro: View {
     
     var body: some View {
         if isActive {
-            directory()
+            Navigation()
         } else {
             VStack {
                 VStack {
