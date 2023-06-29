@@ -26,7 +26,7 @@ struct clubList {
     static let clubs = [
         Club(imageName: "placeholder",
               clubName: "Robotics",
-              roomNumber: "407",
+              roomNumber: "Room 407",
               advisor: "Mr. Good",
               category: "STEM",
               contact: "good@gmail.com",

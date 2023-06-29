@@ -10,39 +10,51 @@ import SwiftUI
 struct ClubDetailView: View {
     var club: Club
     var body: some View {
-        ZStack {
+        ScrollView {
             VStack {
                 Image(club.imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .top)
-                    .ignoresSafeArea()
+                    .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
                 
-                Text("Contact")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text(club.contact)
-                Text("About")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text(club.about)
-                    .font(.body)
-                    .padding()
-                
+                VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 8){
+                        Text(club.clubName)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        Text(club.roomNumber)
+                            .font(.title3)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Divider()
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 8){
+                        Text("Contact")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        Text(club.contact)
+                        
+                        Spacer()
+                        
+                        Text("About")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        Text(club.about)
+                    }
+                }
+                .frame(maxWidth: .infinity,  alignment: .leading)
+                .padding()
                 
             }
-            .ignoresSafeArea()
             
-            VStack(alignment: .leading) {
-                Text(club.clubName)
-                
-                Text(club.roomNumber)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .font(.title)
-            .fontWeight(.bold)
-            .padding(.horizontal, 10)
         }
+        .ignoresSafeArea()
+        .background(.ultraThinMaterial)
     }
 }
 
