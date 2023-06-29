@@ -35,20 +35,33 @@ struct NewToDoView: View {
                  })
 
                 .padding()
-            
-            Button(action: {
-                self.showNewTask = false
-                self.addTask(title: self.title)
-            }) {
-                Text("Add")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                    .padding(.all)
-                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(/*@START_MENU_TOKEN@*/7.0/*@END_MENU_TOKEN@*/)
+            HStack{
+                Button(action: {
+                    self.showNewTask = false
+                    self.addTask(title: self.title)
+                }) {
+                    Text("Add")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .padding(.all)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/7.0/*@END_MENU_TOKEN@*/)
+                }
+                .padding()
+                Button(action: {
+                    self.showNewTask = false
+                }) {
+                    Text("Cancel")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .padding(.all)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/7.0/*@END_MENU_TOKEN@*/)
+                }
+                .padding()
             }
-            .padding()
         }
         .padding(.horizontal)
     }
