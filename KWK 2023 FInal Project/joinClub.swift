@@ -12,14 +12,23 @@ struct joinClub: View {
     @State var clubCode = ""
     
     var body: some View {
+       
         NavigationView {
                 //Page Heading
+          
             VStack {
-                
+                Text("Join Club")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.black)
+                    .multilineTextAlignment(.leading)
+                    .padding(.top)
                 Form {
+                    
                     TextField("Club code", text: $clubCode)
                         .padding(.top)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
                    
                     Button {
                         //add create new club action

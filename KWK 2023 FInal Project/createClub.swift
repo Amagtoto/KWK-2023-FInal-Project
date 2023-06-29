@@ -8,49 +8,93 @@
 import SwiftUI
 
 struct createClub: View {
+    @State var className = ""
+    @State var room = ""
+    @State var advisor = ""
+    @State var category = ""
     var body: some View {
         NavigationView {
                 //Page Heading
-                VStack(alignment: .leading) {
-                    Text("Create Club")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+            VStack {
+                Text("Create Club")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.black)
+                    .padding(.top)
+                Form {
+                    TextField("Class name", text: $className)
                         .padding(.top)
-                //Add your page content here!!!
-                    TextField("Class name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .multilineTextAlignment(.leading)
-                            .font(.title)
-                            .border(Color.gray, width: 2)
-                    TextField("Room", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .multilineTextAlignment(.leading)
-                        .font(.title)
-                        .border(Color.gray, width: 2)
-                    TextField("Advisor", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .multilineTextAlignment(.leading)
-                        .font(.title)
-                        .border(Color.gray, width: 2)
-                    TextField("Category", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .multilineTextAlignment(.leading)
-                        .font(.title)
-                        .border(Color.gray, width: 2)
-
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                    TextField("Room", text: $room)
+                        .padding(.top)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("Advisor", text: $advisor)
+                        .padding(.top)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("Category", text: $category)
+                        .padding(.vertical)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                   
+                    Button {
+                        //add create new club action
+                        
                     }
-
-                            }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(.horizontal)
-                .padding(.vertical)
-                .scrollIndicators(.hidden)
-            
-
+                label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.black)
+                        NavigationLink("Join", destination: myClubs())
+                            .padding(.leading)
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .multilineTextAlignment(.center)
+                           
+                        
+                       
+                        // Text("Join")
+                            //.font(.headline)
+                            //.fontWeight(.bold)
+                            //.foregroundColor(Color.white)
+                    
+                           
+                    }
+                }
+                .padding(.bottom)
+                }
             }
+                    
             
             //Navigation bar
-          
+            .navigationBarItems(
+                leading:
+                    NavigationLink(destination: myClubs()) {
+                        Text("ClubHub")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.black)
+                    },
+                
+                trailing:
+                    HStack {
+                        NavigationLink(destination: schedule()) {
+                            Image(systemName: "calendar")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                        
+                        NavigationLink(destination: directory()) {
+                            Image(systemName: "menucard.fill")
+                                .foregroundColor(.black)
+                                .font(.system(size: 20))
+                        }
+                    
+                    })
+            
+            
+        }
+        .navigationBarBackButtonHidden(true)
+    }
     }
 
 struct createClub_Previews: PreviewProvider {
