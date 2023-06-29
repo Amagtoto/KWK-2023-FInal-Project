@@ -9,10 +9,12 @@ import SwiftUI
 
 struct createClub: View {
     
-    @State var className = ""
+    @State var clubName = ""
     @State var room = ""
     @State var advisor = ""
     @State var category = ""
+    @State var contact = ""
+    @State var about = ""
     
     var body: some View {
         
@@ -23,30 +25,36 @@ struct createClub: View {
                 .padding(.horizontal)
                 .padding(.vertical)
             Form {
-                TextField("Class name", text: $className)
+                TextField("Club name", text: $clubName)
                     .padding(.top)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 TextField("Room", text: $room)
                     .padding(.top)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
                 TextField("Advisor", text: $advisor)
                     .padding(.top)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                   
                 TextField("Category", text: $category)
-                    .padding(.vertical)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.top)
+                   
+                TextField("Contact", text: $contact)
+                    .padding(.top)
+                   
+                TextField("About", text: $about)
+                    .padding(.top)
+                  
                 
                 Button {
                 }
             label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
+                        .padding(.top)
                         .foregroundColor(Color.black)
                     NavigationLink("Join", destination: myClubs())
-                        .padding(.leading)
-                        .font(.headline)
-                        .foregroundColor(Color.white)
+                        .padding([.top, .leading])
+                        .font(.title3)
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.045, brightness: 0.966))
                         .multilineTextAlignment(.center)
                 }
             }
