@@ -27,19 +27,30 @@ struct NewToDoView: View {
                 .background(Color(.systemGroupedBackground))
                     .cornerRadius(15)
                     .padding()
-            Text("Which day?")
-            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { /*@START_MENU_TOKEN@*/Text("Date")/*@END_MENU_TOKEN@*/ })
+                .font(.title3)
+                .fontWeight(.bold)
+            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("Date:")
+                    .font(.body)
+                    .fontWeight(.semibold)
+                 })
 
-            .padding()
+                .padding()
             
             Button(action: {
                 self.showNewTask = false
                 self.addTask(title: self.title)
             }) {
                 Text("Add")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                    .padding(.all)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/7.0/*@END_MENU_TOKEN@*/)
             }
             .padding()
         }
+        .padding(.horizontal)
     }
     
     private func addTask(title: String, isImportant: Bool = false) {
