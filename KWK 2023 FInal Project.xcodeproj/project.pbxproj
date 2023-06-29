@@ -8,16 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0B15515A2A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1551592A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift */; };
-		0B15515C2A4A0C120073829A /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15515B2A4A0C120073829A /* home.swift */; };
 		0B15515E2A4A0C140073829A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B15515D2A4A0C140073829A /* Assets.xcassets */; };
 		0B1551612A4A0C140073829A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1551602A4A0C140073829A /* Preview Assets.xcassets */; };
-		0BA76A6A2A4CCF2800123B70 /* splashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A692A4CCF2800123B70 /* splashScreen.swift */; };
+		0BA76A6A2A4CCF2800123B70 /* intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A692A4CCF2800123B70 /* intro.swift */; };
 		0BA76A6C2A4CD11A00123B70 /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */; };
 		0BA76A6E2A4CD14700123B70 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA76A6D2A4CD14700123B70 /* Club.swift */; };
 		5D5C5E142A4CB88D00C8EC4F /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C5E132A4CB88D00C8EC4F /* schedule.swift */; };
 		CDD4739E2A4CA5E800811760 /* createClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739D2A4CA5E800811760 /* createClub.swift */; };
 		CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4739F2A4CA5F500811760 /* joinClub.swift */; };
-		CDD473A22A4CA62000811760 /* myInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A12A4CA62000811760 /* myInfo.swift */; };
 		CDD473A42A4CA63300811760 /* directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A32A4CA63300811760 /* directory.swift */; };
 		CDD473A62A4CA64000811760 /* myClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD473A52A4CA64000811760 /* myClubs.swift */; };
 /* End PBXBuildFile section */
@@ -25,16 +23,14 @@
 /* Begin PBXFileReference section */
 		0B1551562A4A0C120073829A /* KWK 2023 FInal Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KWK 2023 FInal Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1551592A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWK_2023_FInal_ProjectApp.swift; sourceTree = "<group>"; };
-		0B15515B2A4A0C120073829A /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		0B15515D2A4A0C140073829A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B1551602A4A0C140073829A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0BA76A692A4CCF2800123B70 /* splashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashScreen.swift; sourceTree = "<group>"; };
+		0BA76A692A4CCF2800123B70 /* intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intro.swift; sourceTree = "<group>"; };
 		0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
 		0BA76A6D2A4CD14700123B70 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		5D5C5E132A4CB88D00C8EC4F /* schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 		CDD4739D2A4CA5E800811760 /* createClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createClub.swift; sourceTree = "<group>"; };
 		CDD4739F2A4CA5F500811760 /* joinClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinClub.swift; sourceTree = "<group>"; };
-		CDD473A12A4CA62000811760 /* myInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myInfo.swift; sourceTree = "<group>"; };
 		CDD473A32A4CA63300811760 /* directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = directory.swift; sourceTree = "<group>"; };
 		CDD473A52A4CA64000811760 /* myClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myClubs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,13 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				0B1551592A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift */,
-				0B15515B2A4A0C120073829A /* home.swift */,
+				0BA76A692A4CCF2800123B70 /* intro.swift */,
 				CDD473A52A4CA64000811760 /* myClubs.swift */,
 				CDD4739D2A4CA5E800811760 /* createClub.swift */,
 				5D5C5E132A4CB88D00C8EC4F /* schedule.swift */,
 				CDD4739F2A4CA5F500811760 /* joinClub.swift */,
-				0BA76A692A4CCF2800123B70 /* splashScreen.swift */,
-				CDD473A12A4CA62000811760 /* myInfo.swift */,
 				CDD473A32A4CA63300811760 /* directory.swift */,
 				0BA76A6B2A4CD11A00123B70 /* ClubDetailView.swift */,
 				0BA76A6D2A4CD14700123B70 /* Club.swift */,
@@ -164,16 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BA76A6A2A4CCF2800123B70 /* splashScreen.swift in Sources */,
+				0BA76A6A2A4CCF2800123B70 /* intro.swift in Sources */,
 				CDD473A62A4CA64000811760 /* myClubs.swift in Sources */,
 				0BA76A6C2A4CD11A00123B70 /* ClubDetailView.swift in Sources */,
 				CDD4739E2A4CA5E800811760 /* createClub.swift in Sources */,
-				0B15515C2A4A0C120073829A /* home.swift in Sources */,
 				0B15515A2A4A0C120073829A /* KWK_2023_FInal_ProjectApp.swift in Sources */,
 				CDD473A02A4CA5F500811760 /* joinClub.swift in Sources */,
 				0BA76A6E2A4CD14700123B70 /* Club.swift in Sources */,
 				5D5C5E142A4CB88D00C8EC4F /* schedule.swift in Sources */,
-				CDD473A22A4CA62000811760 /* myInfo.swift in Sources */,
 				CDD473A42A4CA63300811760 /* directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
