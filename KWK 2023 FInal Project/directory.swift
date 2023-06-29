@@ -12,13 +12,13 @@ struct directory: View {
     var clubs: [Club] = clubList.clubs
     var body: some View {
         NavigationView {
-            //ADD PAGE CONTENT IN ScrollView
-
                 //Directory Heading
                 VStack(alignment: .leading) {
                     Text("Directory")
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .padding(.horizontal)
+                        .padding(.vertical)
                     //Nested CELL
                     List(clubs, id:\.id) { club in
                         HStack(spacing: 15) {
@@ -54,8 +54,6 @@ struct directory: View {
                 }
                 .listStyle(.plain)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(.horizontal)
-                .padding(.vertical)
                 .scrollIndicators(.hidden)
             
             .navigationBarItems(

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct myClubs: View {
+    //Variable for the plus icon
+    @State var showingNewView = false
+    
     var body: some View {
         NavigationView {
                 //Page Heading
@@ -15,13 +18,22 @@ struct myClubs: View {
                     Text("My Clubs")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                //Add your page content here!!!
-                            }
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                    
+                         
+                    Button("+") {
+                        showingNewView.toggle()
+                    }
+                    .padding(15)
+                    .foregroundColor(.white)
+                    .font(.system(size: 30))
+                    .background(Color.black)
+                    .clipShape(Circle())
+                }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(.horizontal)
-                .padding(.vertical)
                 .scrollIndicators(.hidden)
-            
+
             //Navigation bar
             .navigationBarItems(
                 leading:
@@ -51,6 +63,7 @@ struct myClubs: View {
 
     }
 }
+
 
 struct myClubs_Previews: PreviewProvider {
     static var previews: some View {
