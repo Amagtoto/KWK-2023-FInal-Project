@@ -17,7 +17,7 @@ struct attendance: View {
                     .fontWeight(.bold)
                     .padding(.horizontal)
                     .padding(.vertical)
-                        Text("        Push button if you attended the meetings!")
+                        Text("         Push button if you attended the meetings!")
                         Toggle(isOn: $showGreeting){
                             Text("7/1")
                             if showGreeting{
