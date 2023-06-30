@@ -19,11 +19,12 @@ struct schedule: View {
     var body: some View {
         //Page Heading
         NavigationStack {
-            ScrollView {
                 VStack(alignment: .leading) {
                     Text("Schedule")
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .padding([.top, .leading])
+                    
                     
                     //Add your page content here!!!
                     VStack {
@@ -68,6 +69,7 @@ struct schedule: View {
                             }
                         }
                         Spacer()
+                        Spacer()
                         MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Binding<Set<DateComponents>>@*/.constant([])/*@END_MENU_TOKEN@*/)
                             .padding(.horizontal)
                             .background(Color.white)
@@ -93,7 +95,7 @@ struct schedule: View {
                     }
                     .padding()
                     .padding(.horizontal)
-                }        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .padding(.horizontal)
                     .padding(.vertical)
                     .scrollIndicators(.hidden)
