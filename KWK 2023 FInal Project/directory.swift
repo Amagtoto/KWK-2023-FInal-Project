@@ -9,7 +9,7 @@ import SwiftUI
 
 struct directory: View {
     
-    var clubs: [Club] = clubList.clubs
+    var clubs: [Club] = ClubList.clubs2
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {

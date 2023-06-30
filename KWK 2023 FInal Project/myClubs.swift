@@ -10,19 +10,16 @@ import SwiftUI
 struct myClubs: View {
     //Variable for the plus icon
     @State var showingNewView = false
-    
     var body: some View {
             //Page Heading
-        VStack(alignment: .leading) {
-            Text("My Clubs")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.horizontal)
-                .padding(.vertical)
+        VStack {
+                   ForEach(ClubList.clubs2) { club in
+                       Text("Club Name:" + club.clubName)
+                   }
+            if ClubList.clubs2.count > 0 {
+                //Text("hi")
             }
-        .listStyle(.plain)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .scrollIndicators(.hidden)
+               }
     }
 }
 

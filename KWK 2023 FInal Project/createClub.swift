@@ -16,8 +16,8 @@ struct createClub: View {
     @State private var contact : String = ""
     @State private var about : String = ""
     
+    
     var body: some View {
-        
         VStack(alignment: .leading) {
             Text("Create Club")
                 .font(.largeTitle)
@@ -43,35 +43,24 @@ struct createClub: View {
                 TextField("About", text: $about)
                     .padding(.top)
                 
-                NavigationLink(destination: myClubs()) {
-                                Text("Next")
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                            }
-                  
-//                NavigationStack {
-//
-//                    Button {
-//                    }
-//                label: {
-//                    ZStack {
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .padding(.top)
-//                            .foregroundColor(Color.black)
-//                        NavigationLink("Join", destination: myClubs())
-//                            .padding([.top, .leading])
-//                            .font(.title3)
-//                            .foregroundColor(Color(hue: 1.0, saturation: 0.045, brightness: 0.966))
-//                            .multilineTextAlignment(.center)
-//                    }
-//                }
+                Button("Add Club") {
+                    ClubList.clubs2.insert(Club(imageName: "placeholder", clubName: clubName, roomNumber: room, advisor: advisor, category: category, contact: contact, about: about), at: 0)
                 }
-            .padding(.bottom)
+                .padding(.all)
+                .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.capsule/*@END_MENU_TOKEN@*/)
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(/*@START_MENU_TOKEN@*/13.0/*@END_MENU_TOKEN@*/)
+                }
+            
+    
             }
+        
         }
+    
     }
+
+
 
 
 struct createClub_Previews: PreviewProvider {

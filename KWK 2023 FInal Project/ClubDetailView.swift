@@ -60,6 +60,10 @@ struct ClubDetailView: View {
 
 struct ClubDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ClubDetailView(club: clubList.clubs.first!)
+        if ClubList.clubs2.isEmpty {
+            Text("No clubs to see")
+        } else {
+            ClubDetailView(club: ClubList.clubs2.first!)
+        }
     }
 }

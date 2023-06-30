@@ -21,9 +21,25 @@ struct Club: Identifiable {
     let about: String
 }
 
-struct clubList {
+struct ClubList: Identifiable{
+    let id = UUID()
+    @State private var clubs: [Club] = []
+    static var clubs2: [Club] = []
     
-    static let clubs = [
+    
+    func getClubs() -> [Club] {
+        return clubs
+    }
+    
+    func addClub(imageName: String, clubName: String, roomNumber: String, advisor: String, category: String, contact: String, about: String) {
+        let newClub = Club(imageName:"uwu", clubName: clubName, roomNumber: roomNumber, advisor: advisor, category: category, contact: contact, about: about)
+        self.clubs.append(newClub)
+    }
+}
+
+struct clubList {
+
+    static var clubs = [
         Club(imageName: "placeholder",
               clubName: "Robotics",
               roomNumber: "Room 407",
@@ -31,7 +47,7 @@ struct clubList {
               category: "STEM",
               contact: "good@gmail.com",
               about: "Build robots!"),
-            
+
         Club(imageName: "placeholder",
               clubName: "Green Team",
               roomNumber: "Room 305",
@@ -39,7 +55,7 @@ struct clubList {
               category: "Enviroment",
               contact: "ekstien@gmail.com",
               about: "Save the enviroment!"),
-        
+
         Club(imageName: "placeholder",
               clubName: "Key Club",
               roomNumber: "Room 305",
@@ -47,7 +63,7 @@ struct clubList {
               category: "Community",
               contact: "ekstien@gmail.com",
               about: "Help out the community!"),
-        
+
         Club(imageName: "placeholder",
               clubName: "Girls Who Code",
               roomNumber: "Room 202",
@@ -55,7 +71,7 @@ struct clubList {
               category: "STEM",
               contact: "sakovitz@gmail.com",
               about: "Learn to code!"),
-        
+
         Club(imageName: "placeholder",
               clubName: "DECA",
               roomNumber: "Room 508",
@@ -63,7 +79,7 @@ struct clubList {
               category: "Business",
               contact: "good@gmail.com",
               about: "Learn about entrepreneurship!"),
-        
+
     ]
 }
 
