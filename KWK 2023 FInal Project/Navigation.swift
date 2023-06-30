@@ -37,8 +37,8 @@ struct Navigation: View {
                     if selectedTab == .book {
                         directory()
                     }
-                    if selectedTab == .message {
-                        myClubs()
+                    if selectedTab == .clipboard {
+                        attendance()
                     }
                 }
             }

@@ -24,28 +24,28 @@ struct joinClub: View {
             Form {
                 
                 TextField("Club code", text: $clubCode)
-                    .padding(.top)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
                 
                 
-                Button {
-                    //add create new club action
-                    
-                }
-            label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.black)
-                    NavigationLink("Join", destination: myClubs())
-                        .padding(.leading)
-                        .font(.headline)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.center)
-                    
-                }
+                Button(action: {
+                    //Add join club action
+    
+                }, label: {
+                   Text("Join Club")
+                })
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.black.cornerRadius(10))
+                .foregroundColor(.white)
+                .font(.headline)
+
+
             }
-            .padding(.bottom)
-            }
+            .scrollContentBackground(.hidden)
         }
     }
 }

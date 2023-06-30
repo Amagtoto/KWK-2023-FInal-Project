@@ -1,16 +1,16 @@
 //
-//  attendance.swift
+//  groupChat.swift
 //  KWK 2023 FInal Project
 //
-//  Created by Nicole Lee on 6/28/23.
+//  Created by Angela Magtoto on 6/29/23.
 //
 
 import SwiftUI
 
-struct attendance: View {
+struct groupChat: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Attendance")
+            Text("Group Chat")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.horizontal)
@@ -24,8 +24,8 @@ struct attendance: View {
     }
 }
 
-struct attendance_Previews: PreviewProvider {
+struct groupChat_Previews: PreviewProvider {
     static var previews: some View {
-        attendance()
+        groupChat()
     }
 }

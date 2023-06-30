@@ -1,13 +1,13 @@
 //
-//  ClubDetailView.swift
+//  myClubView.swift
 //  KWK ClubHub
 //
-//  Created by Angela Magtoto on 6/27/23.
+//  Created by Angela Magtoto on 6/29/23.
 //
 
 import SwiftUI
 
-struct ClubDetailView: View {
+struct myClubDetail: View {
     var club: Club
     var body: some View {
         ScrollView {
@@ -26,6 +26,9 @@ struct ClubDetailView: View {
                         Text(club.roomNumber)
                             .font(.title3)
                             .foregroundColor(.secondary)
+                        Text("Club code:")
+                            .font(.title3)
+                            .foregroundColor(.secondary)
                     }
                     
                     Divider()
@@ -34,16 +37,24 @@ struct ClubDetailView: View {
                         Text("Contact")
                             .font(.title)
                             .fontWeight(.semibold)
-                        
+                                                
                         Text(club.contact)
                         
                         Spacer()
+
                         
-                        Text("About")
+                        Text("Next Meeting")
                             .font(.title)
                             .fontWeight(.semibold)
                         
-                        Text(club.about)
+                        Text("TBD")
+                        
+                        Spacer()
+
+                        Text("Announcments")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
                     }
                 }
                 .frame(maxWidth: .infinity,  alignment: .leading)
@@ -57,12 +68,8 @@ struct ClubDetailView: View {
     }
 }
 
-struct ClubDetailView_Previews: PreviewProvider {
+struct myClubDetail_Previews: PreviewProvider {
     static var previews: some View {
-        if ClubList.clubs2.isEmpty {
-            Text("No clubs to see")
-        } else {
-            ClubDetailView(club: ClubList.clubs2.first!)
-        }
+        myClubDetail(club: clubList.clubs.first!)
     }
 }

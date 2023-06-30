@@ -6,7 +6,7 @@
 //
 
 
-//THIS IS A LIST TO POPULATE THE DIRECTORY
+//THIS IS A LIST TO POPULATE THE DIRECTORY and MYCLUBS
 
 import SwiftUI
 
@@ -37,6 +37,8 @@ struct ClubList: Identifiable{
     }
 }
 
+
+//List of directory clubs to make it look realistic LOL
 struct clubList {
 
     static var clubs = [
@@ -49,28 +51,12 @@ struct clubList {
               about: "Build robots!"),
 
         Club(imageName: "placeholder",
-              clubName: "Green Team",
-              roomNumber: "Room 305",
-              advisor: "Mrs. Ekstien",
-              category: "Enviroment",
-              contact: "ekstien@gmail.com",
-              about: "Save the enviroment!"),
-
-        Club(imageName: "placeholder",
               clubName: "Key Club",
               roomNumber: "Room 305",
               advisor: "Mrs. Ekstien",
               category: "Community",
               contact: "ekstien@gmail.com",
               about: "Help out the community!"),
-
-        Club(imageName: "placeholder",
-              clubName: "Girls Who Code",
-              roomNumber: "Room 202",
-              advisor: "Mr. Sakovitz",
-              category: "STEM",
-              contact: "sakovitz@gmail.com",
-              about: "Learn to code!"),
 
         Club(imageName: "placeholder",
               clubName: "DECA",

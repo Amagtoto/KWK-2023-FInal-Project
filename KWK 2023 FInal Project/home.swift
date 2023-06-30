@@ -11,24 +11,26 @@ struct home: View {
     var body: some View {
         VStack {
             NavigationStack {
-                NavigationLink(destination: createClub()) {
-                    Text("Create Club")
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)
-                        .padding(.top)
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 15)
-                            .padding([.top, .leading])
-                            .frame(width: 125.0, height: 60.0)
-                            .foregroundColor(Color.black)
-                        NavigationLink(destination: joinClub()) {
-                            Text("Join Club")
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.white)
-                                .padding([.top, .leading])
+                NavigationLink(destination: joinClub()) {
+                    Text("Join Club")
+                        .padding()
+                        .frame(maxWidth: 130)
+                        .background(Color.white.cornerRadius(10))
+                        .foregroundColor(.black)
+                        .font(.headline)
+                        .padding(.horizontal)
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 10)
+                    
+                        NavigationLink(destination: createClub()) {
+                            Text("Create Club")
+                                .padding()
+                                .frame(maxWidth: 130)
+                                .background(Color.black.cornerRadius(10))
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .padding(.horizontal)
+                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 10)
                         }
-                    }
                     
                 }
                 .padding([.top, .leading])

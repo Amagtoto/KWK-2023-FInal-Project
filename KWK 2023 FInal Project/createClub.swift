@@ -24,51 +24,83 @@ struct createClub: View {
                 .fontWeight(.bold)
                 .padding(.horizontal)
                 .padding(.vertical)
+            
             Form {
                 TextField("Club name", text: $clubName)
-                    .padding(.top)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
                 
                 TextField("Room", text: $room)
-                    .padding(.top)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
                 
                 TextField("Advisor", text: $advisor)
-                    .padding(.top)
-                   
-                TextField("Category", text: $category)
-                    .padding(.top)
-                   
-                TextField("Contact", text: $contact)
-                    .padding(.top)
-                   
-                TextField("About", text: $about)
-                    .padding(.top)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
                 
-                Button("Add Club") {
+                TextField("Category", text: $category)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
+
+                
+                TextField("Contact", text: $contact)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
+                
+                TextField("About", text: $about)
+                    .padding()
+                    .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .listRowSeparator(.hidden)
+                
+                Button(action: {
                     ClubList.clubs2.insert(Club(imageName: "placeholder", clubName: clubName, roomNumber: room, advisor: advisor, category: category, contact: contact, about: about), at: 0)
-                }
-                .padding(.all)
-                .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.capsule/*@END_MENU_TOKEN@*/)
-                .background(Color.black)
+    
+                }, label: {
+                   Text("Create Club")
+                })
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.black.cornerRadius(10))
                 .foregroundColor(.white)
-                .cornerRadius(/*@START_MENU_TOKEN@*/13.0/*@END_MENU_TOKEN@*/)
-                }
-            
-    
+                .font(.headline)
+                //Di sables button until all fields are filled
+                .disabled(clubName.isEmpty || room.isEmpty || advisor.isEmpty || category.isEmpty || contact.isEmpty || about.isEmpty)
             }
-        
+            .scrollContentBackground(.hidden)
+            
         }
-    
     }
-
-
-
+    
+}
 
 struct createClub_Previews: PreviewProvider {
     static var previews: some View {
         createClub()
     }
 }
-
 
 
 

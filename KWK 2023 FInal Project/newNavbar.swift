@@ -16,7 +16,7 @@ enum Tab: String, CaseIterable {
     case calendar
     case plus
     case book
-    case message
+    case clipboard
 }
 
 struct newNavbar: View {
@@ -35,6 +35,7 @@ struct newNavbar: View {
                         .scaleEffect(selectedTab == tab ? 1.25 : 1.0)
                         .foregroundColor(selectedTab == tab ? .black : .gray)
                         .font(.system(size: 22))
+                        .fontWeight(.semibold)
                         .onTapGesture {
                             withAnimation(.easeIn(duration: 0.1)) {
                                 selectedTab = tab
