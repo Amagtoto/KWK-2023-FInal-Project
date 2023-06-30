@@ -15,6 +15,8 @@ struct NewToDoView: View {
     @State var title: String
 
     @Binding var showNewTask : Bool
+    
+    @State var eventDate = Date.now
 
     var body: some View {
         VStack(alignment: .leading){
@@ -30,7 +32,7 @@ struct NewToDoView: View {
                     .padding()
                 .font(.title3)
                 .fontWeight(.bold)
-            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("Date:")
+            DatePicker(selection: $eventDate, displayedComponents: .date, label: { Text("Date:")
                     .font(.body)
                     .fontWeight(.semibold)
                  })
@@ -38,7 +40,7 @@ struct NewToDoView: View {
             HStack{
                 Button(action: {
                     self.showNewTask = false
-                    self.addTask(title: self.title)
+                    self.addTask(title: "\(eventDate.formatted(date: .long, time: .omitted)) - \(self.title)")
                 }) {
                     Text("Add")
                         .padding()
